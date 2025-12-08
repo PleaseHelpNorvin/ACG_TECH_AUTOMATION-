@@ -14,7 +14,6 @@ def test_flow(page):
 
     login = LoginPage(page)
     navigation = Navigate(page)
-
     openlocknow = OpenLockNowPage(page)
     resetuserkeynow = ResetUserKeyNowPage(page)
     resettampernow = ResetTamperNowPage(page)
