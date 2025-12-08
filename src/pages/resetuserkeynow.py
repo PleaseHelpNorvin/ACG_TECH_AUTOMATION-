@@ -5,3 +5,4 @@ class ResetUserKeyNowPage(BasePage):
 
     def hello(self):
         print("hellow ResetUserKeyNowPage")
+
