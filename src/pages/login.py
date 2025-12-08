@@ -8,5 +8,5 @@ class LoginPage(BasePage):
         self.fill_text("#Username", username)
         self.fill_text("#Password", password)
         self.fill_text("#CaptchaCase", captcha)
-        self.click_element("#AuthenticationLogin button[type='submit']")
-        self.page.wait_for_url("**/systemstat")
+        self.click_element("#AuthenticationLogin input[type='submit']")
+        self.page.wait_for_url("**/technician/dashboardv2", timeout=30000)
