@@ -12,24 +12,14 @@ from src.pages.returnactiveoperationcode import ReturnActiveOperationCodePage
 def test_flow(page): 
     page.goto("http://localhost:8890/")
 
-    login = LoginPage(page)
-    navigation = Navigate(page)
-    openlocknow = OpenLockNowPage(page)
-    resetuserkeynow = ResetUserKeyNowPage(page)
-    resettampernow = ResetTamperNowPage(page)
-    closecodevialockid = CloseCodeViaLockIdPage(page)
-    closecodeviaaseal = CloseCodeViaASealPage(page)
-    openlocknokeycode = OpenLockNoKeyCodePage(page)
-    returnactiveoperationcode = ReturnActiveOperationCodePage(page)
-
-    login.login("acgtech", "locks", "bypassed")
-    openlocknow_flow(navigation, openlocknow)
-    resetuserkeynow_flow(navigation, resetuserkeynow)
-    resettampernow_flow(navigation, resettampernow)
-    closecodevialockid_flow(navigation, closecodevialockid)
-    closecodeviaaseal_flow(navigation, closecodeviaaseal)
-    openlocknokeycode_flow(navigation, openlocknokeycode)
-    returnactiveoperationcode_flow(navigation, returnactiveoperationcode)
+    LoginPage(page).login("acgtech", "locks", "bypassed")
+    openlocknow_flow(Navigate(page), OpenLockNowPage(page))
+    resetuserkeynow_flow(Navigate(page), ResetUserKeyNowPage(page))
+    resettampernow_flow(Navigate(page), ResetTamperNowPage(page))
+    closecodevialockid_flow(Navigate(page), CloseCodeViaLockIdPage(page))
+    closecodeviaaseal_flow(Navigate(page), CloseCodeViaASealPage(page))
+    openlocknokeycode_flow(Navigate(page), OpenLockNoKeyCodePage(page))
+    returnactiveoperationcode_flow(Navigate(page), ReturnActiveOperationCodePage(page))
     logout(page)
     
 def openlocknow_flow(navigation, openlocknow):
