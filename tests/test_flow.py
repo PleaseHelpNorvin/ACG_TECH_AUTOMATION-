@@ -33,32 +33,30 @@ def test_flow(page):
             returnactiveoperationcode_flow(Navigate(page), ReturnActiveOperationCodePage(page), tech)
 
         logout(page)
-
-
     
 def openlocknow_flow(navigation, openlocknow, tech):
     navigation.go_to_open_lock_now()
-    openlocknow.hello()
-    
+    openlocknow.test_form(tech)
+
 def resetuserkeynow_flow(navigation, resetuserkeynow, tech):
     navigation.go_to_reset_user_key_now()
-    resetuserkeynow.hello()
+    resetuserkeynow.test_form(tech)
 
 def resettampernow_flow(navigation, resettampernow, tech):
     navigation.go_to_reset_tamper_now()
-    resettampernow.hello()
+    resettampernow.test_form(tech)
 
 def closecodevialockid_flow(navigation, closecodevialockid, tech):
     navigation.go_to_close_code_via_lock_id()
-    closecodevialockid.hello()
+    closecodevialockid.test_form(tech)
 
 def closecodeviaaseal_flow(navigation, closecodeviaaseal, tech):
     navigation.go_to_close_code_via_a_seal()
-    closecodeviaaseal.hello()
+    closecodeviaaseal.test_form(tech)
 
 def openlocknokeycode_flow(navigation, openlocknokeycode, tech):
     navigation.go_to_open_lock_no_key_code()
-    openlocknokeycode.hello()
+    openlocknokeycode.test_form(tech)
 
 def returnactiveoperationcode_flow(navigation, returnactiveoperationcode,tech):
     navigation.go_to_return_active_operation_codes()

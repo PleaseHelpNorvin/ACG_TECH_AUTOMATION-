@@ -6,3 +6,9 @@ class ResetUserKeyNowPage(BasePage):
     def hello(self):
         print("hellow ResetUserKeyNowPage")
 
+    def test_form(self, tech): 
+        print(f"[ResetUserKeyNow] Technician: {tech}")
+        self.fill_text("input[name='LockId']", "12345678")
+        self.fill_text("input[name='Pin']", "0000")
+        self.click_element("#btnExecute")
+        self.sleep(2)
